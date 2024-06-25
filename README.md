@@ -1,4 +1,4 @@
-# Wap - Maze ROBO-TRAP
+# Wap Maze Robots
 ## Pohyb robotů v bludišti na webovém plátně
 
 Dostupné na https://jkotoun.github.io/WAP_Maze-robots/

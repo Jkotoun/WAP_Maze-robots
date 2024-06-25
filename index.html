@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>WAP-robo-trap</title>
+  </head>
+  <body>
+    <header>
+      <h1>Maze ROBO-TRAP</h1>
+    </header>
+
+    <div class="container">
+      <div class="controls">
+        <form id="settings" action="">
+          <h2>Maze Settings</h2>
+          <label for="mazeSize">Maze Size:</label>
+          <select id="mazeSize">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <label for="robotsSpeed">Pathfinding simulation speed:</label>
+          <select id="robotsSpeed">
+            <option value="slow">Slow</option>
+            <option value="medium">Medium</option>
+            <option value="fast">Fast</option>
+          </select>
+          <span>
+          <label for="mazeLoops">Allow loops:</label>
+          <input id="mazeLoops" type="checkbox" value="checked"/>
+          </span>
+          <br />
+          <input id="submit" type="submit" value="Generate Maze" />
+        </form>
+
+        <form id="robot" action="">
+          <h2>Robots</h2>
+          <span class="description">Select robot type and click on any maze cell to spawn robot</span>
+          <label for="robotHeuristic">Robot Direction:</label>
+          <select id="robotHeuristic">
+            <option value="random">Random direction</option>
+            <option value="right">Right Wall Follower</option>
+            <option value="left">Left Wall Follower</option>
+            <option value="backtracking">Backtracking</option>
+            <option value="tremaux">Trémaux's algorithm (loop solving)</option>
+          </select>
+        </form>
+        <h2>Robots logs</h2>
+        <div class="completed"></div>
+
+      </div>
+      <div class="maze-container">
+        <canvas class="maze"></canvas>
+      </div>
+    </div>
+    
+    <script src="src/Helpers.js"></script>
+    <script src="src/Player.js"></script>
+    <script src="src/Cell.js"></script>
+    <script src="src/MazeRobotBasic.js"></script>
+    <script src="src/MazeRobotRight.js"></script>
+    <script src="src/MazeRobotLeft.js"></script>
+    <script src="src/MazeRobotBacktracking.js"></script>
+    <script src="src/MazeRobotTremaux.js"></script>
+    <script src="src/Maze.js"></script>
+    <script src="src/Main.js"></script>
+  </body>
+</html>
